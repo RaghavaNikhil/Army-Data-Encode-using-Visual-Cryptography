@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+ table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+body {
+  background-color: powderblue;
+}
+h2 {
+  color: black;
+}
+.homeB {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+  </style>
+    <title>N Share Page</title>
+</head>
+<body>
+<h1> SHARES SEND TO YOUR EMAIL</h1>
+<div align="center"><button class="homeB" onclick="window.location.href='http://127.0.0.1:8000/'">Home</button></div>
+
+
+<table border="1">
+  <tr >
+    <th>Email Address</th>
+    <th>Your Share Of Image</th>
+  </tr>
+  {% for x in n_images%}
+  <tr>
+    {% load static %}
+    <td>{{x.1}}</td>
+    <td><img src = "{% static  x.0 %}" /></td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decryption Page</title>
+    <style>
+              h1 {
+      display: block;
+      font-size: 4em;
+      margin-top: 0.67em;
+      margin-bottom: 0.67em;
+      margin-left: 0;
+      margin-right: 0;
+      font-weight: bold;
+      text-align: left;
+    }
+                      p {
+      <!--display: block;-->
+      <!--font-size: 2em;-->
+      <!--margin-top: 0.67em;-->
+      <!--margin-bottom: 0.67em;-->
+      <!--margin-left: 0;-->
+      <!--margin-right: 0;-->
+      <!--font-weight: bold;-->
+      <!--text-align: center;-->
+    <!--}-->
+                          <!--input {-->
+      <!--display: block;-->
+      <!--font-size: 2em;-->
+      <!--margin-top: 0.67em;-->
+      <!--margin-bottom: 0.67em;-->
+      <!--margin-left: 0;-->
+      <!--margin-right: 0;-->
+      <!--font-weight: bold;-->
+      <!--text-align: center;-->
+    <!--}-->
+
+    .submit {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .homeB {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+          body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    background-image: url(https://images.unsplash.com/photo-1494972688394-4cc796f9e4c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-size: cover;
+    }
+
+    <!--.form {-->
+		<!--margin: 0 auto;-->
+		<!--width: 210px;-->
+	<!--}-->
+	<!--.form label{-->
+		<!--display: inline-block;-->
+		<!--text-align: right;-->
+		<!--float: left;-->
+	<!--}-->
+	<!--.form input{-->
+		<!--display: inline-block;-->
+		<!--text-align: left;-->
+		<!--float: right;-->
+	<!--}-->
+    </style>
+</head>
+<body>
+<h1>N-K IMAGE DECRYPTION</h1>
+<div align="center"><button class="homeB" onclick="window.location.href='http://127.0.0.1:8000/'">Home</button></div>
+<form class="form" method="post" enctype="multipart/form-data" >
+    {% csrf_token%}
+    <p>Enter K Value</p>
+    <input  type="text" name="k_value"><br>
+    <p>Enter D Value</p>
+    <input  type="text" name="d_value"><br>
+    <p>Enter n(product) Value</p>
+    <input  type="text" name="n_value"><br>
+
+    <p>Upload K Images</p>
+    <input type="file" name='k_image' multiple="multiple"><br>
+
+    <p>Enter your Key</p>
+    <input type="password" name="decrypt_pass"><br><br>
+  <input class="submit" type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>
+
